@@ -13,13 +13,13 @@ class Truck {
 private:
    static std::string getTruckName();
    TruckStatus truckStatus;
-   std::string name;
-   double normalSpeed;
+   std::string const name;
+   double const normalSpeed;
    double actualSpeed;
    double distanceTraveled;
 public:
    Truck();
    void prepareForLap(bool& isYellowFlag);
-   std::string toString();
+   std::string toString() const;
    void moveForAnHour();
 };

@@ -34,7 +34,7 @@ void Truck::moveForAnHour(){
     distanceTraveled += actualSpeed;
 }
 
-string Truck::toString(){
+string Truck::toString() const{
     return "Type: Truck, Name: " + name + ", normal speed: " + to_string(normalSpeed) + ", actual speed: " +
         to_string(actualSpeed) + ", distance traveled: " + to_string(distanceTraveled);
 }

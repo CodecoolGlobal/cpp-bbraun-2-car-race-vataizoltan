@@ -27,39 +27,39 @@ void Race::simulateRace(Weather& weather){
     }
 }
 
-void Race::printRaceResults() {
+void Race::printRaceResults() const {
     string results = "";
 
-    for (Car car : cars) {
+    for (Car const& car : cars) {
         results += car.toString() + "\n";
     }
 
-    for (Motorcycle motorcycle : motorcycles) {
+    for (Motorcycle const& motorcycle : motorcycles) {
         results += motorcycle.toString() + "\n";
     }
 
-    for (Truck truck : trucks) {
+    for (Truck const& truck : trucks) {
         results += truck.toString() + "\n";
     }
 
     cout << results;
 }
 
-bool Race::isYellowFlagActive() {
+bool Race::isYellowFlagActive() const {
     return isYellowFlag;
 }
 
-void Race::registerCar(Car car) {
+void Race::registerCar(Car const& car) {
     cout << car.toString() << endl;
     cars.push_back(car);
 }
 
-void Race::registerMotorcycle(Motorcycle motorcycle) {
+void Race::registerMotorcycle(Motorcycle const& motorcycle) {
     cout << motorcycle.toString() << endl;
     motorcycles.push_back(motorcycle);
 }
 
-void Race::registerTruck(Truck truck) {
+void Race::registerTruck(Truck const& truck) {
     cout << truck.toString() << endl;
     trucks.push_back(truck);
 }
